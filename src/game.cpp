@@ -5,6 +5,7 @@
  * Description: Game class to deal with initialization and controller of 2D my game application.
  */
 #include "game.h"
+#include "move.h"
 
 const float Game::SCENE_WIDTH = 800.0f;
 const float Game::SCENE_HEIGHT = 600.0f;

@@ -14,6 +14,8 @@ configure_file(resources/pacman.png ${CMAKE_CURRENT_BINARY_DIR}/resources/pacman
 add_executable(2D_game_assignment
         src/main.cpp
         src/game.cpp
-        src/game.cpp)
+        src/game.cpp
+        src/move.cpp
+        include/move.h)
 
 target_link_libraries(${PROJECT_NAME} sfml-graphics sfml-window sfml-system)
