@@ -1,8 +1,9 @@
-//
-// Created by Greta Lerer on 23/11/23.
-//
+// move.h
+#pragma once
 
-#ifndef INC_2D_GAME_ASSIGNMENT_MOVE_H
-#define INC_2D_GAME_ASSIGNMENT_MOVE_H
+#include <SFML/Graphics/CircleShape.hpp>
 
-#endif //INC_2D_GAME_ASSIGNMENT_MOVE_H
+class Move {
+public:
+    static void movePlayer(sf::CircleShape& player, sf::Vector2f& velocity, float speed);
+};

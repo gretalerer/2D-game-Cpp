@@ -164,7 +164,7 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "src/move.h",
+			"path" : "include/move.h",
 			"sourceGroupIndex" : 1
 		}
 	],

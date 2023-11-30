@@ -177,6 +177,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2D_game_assignment.dir/build.make CMakeFiles/2D_game_assignment.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/move.o: src/move.cpp.o
+.PHONY : src/move.o
+
+# target to build an object file
+src/move.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2D_game_assignment.dir/build.make CMakeFiles/2D_game_assignment.dir/src/move.cpp.o
+.PHONY : src/move.cpp.o
+
+src/move.i: src/move.cpp.i
+.PHONY : src/move.i
+
+# target to preprocess a source file
+src/move.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2D_game_assignment.dir/build.make CMakeFiles/2D_game_assignment.dir/src/move.cpp.i
+.PHONY : src/move.cpp.i
+
+src/move.s: src/move.cpp.s
+.PHONY : src/move.s
+
+# target to generate assembly for a file
+src/move.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2D_game_assignment.dir/build.make CMakeFiles/2D_game_assignment.dir/src/move.cpp.s
+.PHONY : src/move.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +216,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/move.o"
+	@echo "... src/move.i"
+	@echo "... src/move.s"
 .PHONY : help
 
 

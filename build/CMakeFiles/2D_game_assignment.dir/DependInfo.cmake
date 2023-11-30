@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/gretalerer/computerprogrammingII/2D-game/src/game.cpp" "CMakeFiles/2D_game_assignment.dir/src/game.cpp.o" "gcc" "CMakeFiles/2D_game_assignment.dir/src/game.cpp.o.d"
   "/Users/gretalerer/computerprogrammingII/2D-game/src/main.cpp" "CMakeFiles/2D_game_assignment.dir/src/main.cpp.o" "gcc" "CMakeFiles/2D_game_assignment.dir/src/main.cpp.o.d"
+  "/Users/gretalerer/computerprogrammingII/2D-game/src/move.cpp" "CMakeFiles/2D_game_assignment.dir/src/move.cpp.o" "gcc" "CMakeFiles/2D_game_assignment.dir/src/move.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

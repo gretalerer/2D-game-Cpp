@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/2D_game_assignment.dir/src/game.cpp.o.d"
   "CMakeFiles/2D_game_assignment.dir/src/main.cpp.o"
   "CMakeFiles/2D_game_assignment.dir/src/main.cpp.o.d"
+  "CMakeFiles/2D_game_assignment.dir/src/move.cpp.o"
+  "CMakeFiles/2D_game_assignment.dir/src/move.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

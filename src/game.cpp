@@ -74,9 +74,8 @@ void Game::processInput() {
  * Function to update the position of the player
  */
 void Game::update() {
-    float x = player.getPosition().x;
-    float y = player.getPosition().y;
-    player.setPosition(x, y);
+    sf::Vector2f velocity;
+    Move::movePlayer(player, velocity, 1.0f); // Adjust the speed as needed
 }
 
 /**
