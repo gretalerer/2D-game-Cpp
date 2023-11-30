@@ -74,8 +74,31 @@ void Game::processInput() {
  * Function to update the position of the player
  */
 void Game::update() {
-    sf::Vector2f targetPosition(500.0f, 400.0f); // Adjust the target position as needed
-    Move::movePlayer(player, targetPosition, 1.0f); // Adjust the speed as needed
+    //definir el target position aca:
+    sf::Vector2f targetPosition(0.f, 0.f);
+
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+    {
+        // left key is pressed: move our character
+        targetPosition = sf::Vector2f(-1.f, 0.f);
+    }
+    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+    {
+        // left key is pressed: move our character
+        targetPosition = sf::Vector2f(1.f, 0.f);
+    }
+    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+    {
+        // left key is pressed: move our character
+        targetPosition = sf::Vector2f(0.f, +1.f);
+    }
+    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+    {
+        // left key is pressed: move our character
+        targetPosition = sf::Vector2f(0.f, -1.f);
+    }
+
+    Move::movePlayer(player, &targetPosition, 1.0f); // Pass the address
 }
 
 /**
@@ -98,3 +121,5 @@ int Game::run() {
     }
     return 0;
 }
+
+//hola soy greta

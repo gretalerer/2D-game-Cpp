@@ -1232,6 +1232,7 @@ CMakeFiles/2D_game_assignment.dir/src/move.cpp.o: /Users/gretalerer/computerprog
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/cassert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/chrono \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/climits \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/cmath \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/compare \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/concepts \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/cstddef \
@@ -1248,6 +1249,7 @@ CMakeFiles/2D_game_assignment.dir/src/move.cpp.o: /Users/gretalerer/computerprog
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/iterator \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/limits \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/limits.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/math.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/memory \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/new \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/ratio \
@@ -1279,6 +1281,7 @@ CMakeFiles/2D_game_assignment.dir/src/move.cpp.o: /Users/gretalerer/computerprog
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/machine/signal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/machine/types.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/malloc/_malloc.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/math.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/pthread.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/pthread/pthread_impl.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/pthread/qos.h \
@@ -1375,6 +1378,10 @@ CMakeFiles/2D_game_assignment.dir/src/move.cpp.o: /Users/gretalerer/computerprog
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Vector2.hpp \
   /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Vector2.inl
 
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/math.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/cmath:
 
 /Users/gretalerer/computerprogrammingII/2D-game/src/move.cpp:
 
@@ -2263,6 +2270,8 @@ CMakeFiles/2D_game_assignment.dir/src/move.cpp.o: /Users/gretalerer/computerprog
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__algorithm/max_element.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/limits.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/math.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__algorithm/copy_backward.h:
 

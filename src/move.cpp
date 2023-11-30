@@ -2,15 +2,14 @@
 #include "move.h"
 #include <cmath>
 
-void Move::movePlayer(sf::CircleShape& player, const sf::Vector2f& targetPosition, float speed) {
-    sf::Vector2f currentPosition = player.getPosition();
-    sf::Vector2f direction = targetPosition - currentPosition;
-
-    float length = std::sqrt(direction.x * direction.x + direction.y * direction.y);
-    if (length > 0) {
-        direction /= length;
+void Move::movePlayer(sf::CircleShape& player, const sf::Vector2f* targetPosition, float speed) {
+    // Check if the pointer is valid before dereferencing
+    if (targetPosition) {
+      // Dereference the pointer and update the target position
+      sf::Vector2f movement = (*targetPosition) * speed;
+      player.move(movement);
     }
-
-    sf::Vector2f velocity = direction * speed;
-    player.move(velocity);
 }
+
+
+//hola soy greta
