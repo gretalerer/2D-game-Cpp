@@ -74,8 +74,8 @@ void Game::processInput() {
  * Function to update the position of the player
  */
 void Game::update() {
-    sf::Vector2f velocity;
-    Move::movePlayer(player, velocity, 1.0f); // Adjust the speed as needed
+    sf::Vector2f targetPosition(500.0f, 400.0f); // Adjust the target position as needed
+    Move::movePlayer(player, targetPosition, 1.0f); // Adjust the speed as needed
 }
 
 /**

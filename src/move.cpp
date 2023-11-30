@@ -1,11 +1,16 @@
 // move.cpp
 #include "move.h"
+#include <cmath>
 
-void Move::movePlayer(sf::CircleShape& player, sf::Vector2f& velocity, float speed) {
-    velocity.x = speed; // Adjust as needed
-    velocity.y = speed; // Adjust as needed
+void Move::movePlayer(sf::CircleShape& player, const sf::Vector2f& targetPosition, float speed) {
+    sf::Vector2f currentPosition = player.getPosition();
+    sf::Vector2f direction = targetPosition - currentPosition;
 
-    float x = player.getPosition().x + velocity.x;
-    float y = player.getPosition().y + velocity.y;
-    player.setPosition(x, y);
+    float length = std::sqrt(direction.x * direction.x + direction.y * direction.y);
+    if (length > 0) {
+        direction /= length;
+    }
+
+    sf::Vector2f velocity = direction * speed;
+    player.move(velocity);
 }
