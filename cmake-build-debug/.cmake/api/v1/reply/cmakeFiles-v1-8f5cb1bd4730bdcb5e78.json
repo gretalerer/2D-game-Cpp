@@ -171,6 +171,9 @@
 		},
 		{
 			"path" : "resources/pacman.png"
+		},
+		{
+			"path" : "resources/pacman.png"
 		}
 	],
 	"kind" : "cmakeFiles",

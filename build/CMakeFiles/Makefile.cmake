@@ -12,6 +12,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.27.8/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.27.8/CMakeSystem.cmake"
   "/Users/gretalerer/computerprogrammingII/2D-game/resources/background.png"
+  "/Users/gretalerer/computerprogrammingII/2D-game/resources/ghost.png"
   "/Users/gretalerer/computerprogrammingII/2D-game/resources/pacman.png"
   "/opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeCInformation.cmake"
   "/opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeCXXInformation.cmake"
@@ -51,6 +52,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "resources/background.png"
   "resources/pacman.png"
+  "resources/ghost.png"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 

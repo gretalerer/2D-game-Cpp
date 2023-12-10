@@ -13,10 +13,8 @@ const float Game::SCENE_HEIGHT = 600.0f;
 const float Game::PLAYER_START_X = 400.0f;
 const float Game::PLAYER_START_Y = 300.0f;
 const float Game::RADIUS = 20.0f;
-
-//making the ghost start in random places
-float Game::GHOST_START_X = (rand() % 800 + 1);
-float Game::GHOST_START_Y = (rand() % 600 + 1);
+float Game::GHOST_START_X;
+float Game::GHOST_START_Y;
 
 Game::Game() : ghostMoveClock() {
     initWindow();
@@ -61,18 +59,22 @@ int Game::initPlayer() {
 }
 
 int Game::initGhost() {
-    ghost.setRadius(RADIUS);
-    ghost.setOrigin(RADIUS, RADIUS);
-    ghost.setPosition(GHOST_START_X, GHOST_START_Y);
+        GHOST_START_X = (rand() % 800 + 1);
+        GHOST_START_Y = (rand() % 600 + 1);
 
-    if (!ghostTexture.loadFromFile("resources/ghost.png")) {
-        return 1;
-    }
+        ghost.setRadius(RADIUS);
+        ghost.setOrigin(RADIUS, RADIUS);
+        ghost.setPosition(GHOST_START_X, GHOST_START_Y);
 
-    ghost.setTexture(&ghostTexture);
+        if (!ghostTexture.loadFromFile("resources/ghost.png")) {
+            return 1;
+        }
 
-    return 0;
+        ghost.setTexture(&ghostTexture);
+
+        return 0;
 }
+
 
 /**
  * Dealing with events on window.
@@ -98,34 +100,47 @@ void Game::update() {
 
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
         targetPosition = sf::Vector2f(-1.f, 0.f);
-    } else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
+    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
         targetPosition = sf::Vector2f(1.f, 0.f);
-    } else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
+    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
         targetPosition = sf::Vector2f(0.f, 1.f);
-    } else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
         targetPosition = sf::Vector2f(0.f, -1.f);
     }
 
     sf::Vector2f newPositionPlayer = player.getPosition() + targetPosition;
     if (newPositionPlayer.x - RADIUS >= 0 && newPositionPlayer.x + RADIUS <= SCENE_WIDTH &&
-    newPositionPlayer.y - RADIUS >= 0 && newPositionPlayer.y + RADIUS <= SCENE_HEIGHT) {
+        newPositionPlayer.y - RADIUS >= 0 && newPositionPlayer.y + RADIUS <= SCENE_HEIGHT) {
         Move::movePlayer(player, &targetPosition, 1.0f);
     }
 
     if (ghostMoveClock.getElapsedTime().asSeconds() >= 0.5) {
 
-        float x_ghost = static_cast<float>(rand() % 3 - 1); // Random number between -1 and 1
-        float y_ghost = static_cast<float>(rand() % 3 - 1); // Random number between -1 and 1
+        sf::Vector2f target_pos_ghost;
+        bool validPosition = false;
 
-        sf::Vector2f target_pos_ghost(x_ghost, y_ghost);
-        sf::Vector2f newPositionGhost = ghost.getPosition() + target_pos_ghost;
+        while (!validPosition) {
+            float x_ghost = static_cast<float>(rand() % 2);
+            float y_ghost = static_cast<float>(rand() % 2);
 
-        Move::movePlayer(ghost, &target_pos_ghost, 10.0f);
+            target_pos_ghost = sf::Vector2f(x_ghost * 10.0f, y_ghost * 10.0f); // Increasing the step size
+            sf::Vector2f potentialNewPosition = ghost.getPosition() + target_pos_ghost;
+            validPosition = ghostIsValidPosition(potentialNewPosition); // Check the potential new position
 
 
-        // Reset the clock
-        ghostMoveClock.restart();
+            Move::movePlayer(ghost, &target_pos_ghost, 1.0f); // Use a lower speed factor
+
+            // Reset the clock
+            ghostMoveClock.restart();
+        }
     }
+
+}
+
+bool Game::ghostIsValidPosition(const sf::Vector2f &position) {
+    // Checking if the entire ghost (considering radius) is within the scene
+    return (position.x - RADIUS >= 0 && position.x + RADIUS <= SCENE_WIDTH &&
+            position.y - RADIUS >= 0 && position.y + RADIUS <= SCENE_HEIGHT);
 }
 
 
@@ -151,5 +166,3 @@ int Game::run() {
     }
     return 0;
 }
-
-//hola soy greta
