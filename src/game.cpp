@@ -74,31 +74,30 @@ void Game::processInput() {
  * Function to update the position of the player
  */
 void Game::update() {
-    //definir el target position aca:
     sf::Vector2f targetPosition(0.f, 0.f);
 
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
     {
-        // left key is pressed: move our character
         targetPosition = sf::Vector2f(-1.f, 0.f);
     }
     else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
     {
-        // left key is pressed: move our character
         targetPosition = sf::Vector2f(1.f, 0.f);
     }
     else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
     {
-        // left key is pressed: move our character
         targetPosition = sf::Vector2f(0.f, +1.f);
     }
     else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
     {
-        // left key is pressed: move our character
         targetPosition = sf::Vector2f(0.f, -1.f);
     }
 
-    Move::movePlayer(player, &targetPosition, 1.0f); // Pass the address
+    sf::Vector2f newPosition = player.getPosition() + targetPosition;
+    if (newPosition.x - RADIUS >= 0 && newPosition.x + RADIUS <= SCENE_WIDTH &&
+        newPosition.y - RADIUS >= 0 && newPosition.y + RADIUS <= SCENE_HEIGHT) {
+        Move::movePlayer(player, &targetPosition, 1.0f);
+    }
 }
 
 /**

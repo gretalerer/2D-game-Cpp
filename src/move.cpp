@@ -3,7 +3,7 @@
 #include <cmath>
 
 void Move::movePlayer(sf::CircleShape& player, const sf::Vector2f* targetPosition, float speed) {
-    // Check if the pointer is valid before dereferencing
+    // Check if the pointer is valid before de-referencing
     if (targetPosition) {
       // Dereference the pointer and update the target position
       sf::Vector2f movement = (*targetPosition) * speed;
@@ -11,5 +11,3 @@ void Move::movePlayer(sf::CircleShape& player, const sf::Vector2f* targetPositio
     }
 }
 
-
-//hola soy greta
