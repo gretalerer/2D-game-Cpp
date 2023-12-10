@@ -6,6 +6,7 @@
  */
 #include "game.h"
 #include "move.h"
+#include <cstdlib>
 
 const float Game::SCENE_WIDTH = 800.0f;
 const float Game::SCENE_HEIGHT = 600.0f;
@@ -13,10 +14,15 @@ const float Game::PLAYER_START_X = 400.0f;
 const float Game::PLAYER_START_Y = 300.0f;
 const float Game::RADIUS = 20.0f;
 
-Game::Game() {
+//making the ghost start in random places
+float Game::GHOST_START_X = (rand() % 800 + 1);
+float Game::GHOST_START_Y = (rand() % 600 + 1);
+
+Game::Game() : ghostMoveClock() {
     initWindow();
     initBackground();
     initPlayer();
+    initGhost();
 }
 /**
  * Window initializer.
@@ -54,6 +60,20 @@ int Game::initPlayer() {
     return 0;
 }
 
+int Game::initGhost() {
+    ghost.setRadius(RADIUS);
+    ghost.setOrigin(RADIUS, RADIUS);
+    ghost.setPosition(GHOST_START_X, GHOST_START_Y);
+
+    if (!ghostTexture.loadFromFile("resources/ghost.png")) {
+        return 1;
+    }
+
+    ghost.setTexture(&ghostTexture);
+
+    return 0;
+}
+
 /**
  * Dealing with events on window.
  */
@@ -76,29 +96,39 @@ void Game::processInput() {
 void Game::update() {
     sf::Vector2f targetPosition(0.f, 0.f);
 
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
-    {
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
         targetPosition = sf::Vector2f(-1.f, 0.f);
-    }
-    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
-    {
+    } else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
         targetPosition = sf::Vector2f(1.f, 0.f);
-    }
-    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
-    {
-        targetPosition = sf::Vector2f(0.f, +1.f);
-    }
-    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
-    {
+    } else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
+        targetPosition = sf::Vector2f(0.f, 1.f);
+    } else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
         targetPosition = sf::Vector2f(0.f, -1.f);
     }
 
-    sf::Vector2f newPosition = player.getPosition() + targetPosition;
-    if (newPosition.x - RADIUS >= 0 && newPosition.x + RADIUS <= SCENE_WIDTH &&
-        newPosition.y - RADIUS >= 0 && newPosition.y + RADIUS <= SCENE_HEIGHT) {
+    sf::Vector2f newPositionPlayer = player.getPosition() + targetPosition;
+    if (newPositionPlayer.x - RADIUS >= 0 && newPositionPlayer.x + RADIUS <= SCENE_WIDTH &&
+    newPositionPlayer.y - RADIUS >= 0 && newPositionPlayer.y + RADIUS <= SCENE_HEIGHT) {
         Move::movePlayer(player, &targetPosition, 1.0f);
     }
+
+    if (ghostMoveClock.getElapsedTime().asSeconds() >= 0.5) {
+
+        float x_ghost = static_cast<float>(rand() % 3 - 1); // Random number between -1 and 1
+        float y_ghost = static_cast<float>(rand() % 3 - 1); // Random number between -1 and 1
+
+        sf::Vector2f target_pos_ghost(x_ghost, y_ghost);
+        sf::Vector2f newPositionGhost = ghost.getPosition() + target_pos_ghost;
+
+        Move::movePlayer(ghost, &target_pos_ghost, 10.0f);
+
+
+        // Reset the clock
+        ghostMoveClock.restart();
+    }
 }
+
+
 
 /**
  * Render elements in the window
@@ -107,6 +137,7 @@ void Game::render() {
     window.clear(sf::Color::White);
     window.draw(background);
     window.draw(player);
+    window.draw(ghost);
     window.display();
 }
 /**
