@@ -64,15 +64,70 @@ CMAKE_BINARY_DIR = "/Users/santiagofischel/Desktop/University/Programming 2/2D-g
 
 # The main recursive "all" target.
 all: CMakeFiles/2D_game_assignment.dir/all
+all: CMakeFiles/game_tests.dir/all
+all: extern/googletest/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: extern/googletest/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/2D_game_assignment.dir/clean
+clean: CMakeFiles/game_tests.dir/clean
+clean: extern/googletest/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory extern/googletest
+
+# Recursive "all" directory target.
+extern/googletest/all: extern/googletest/googlemock/all
+.PHONY : extern/googletest/all
+
+# Recursive "preinstall" directory target.
+extern/googletest/preinstall: extern/googletest/googlemock/preinstall
+.PHONY : extern/googletest/preinstall
+
+# Recursive "clean" directory target.
+extern/googletest/clean: extern/googletest/googlemock/clean
+.PHONY : extern/googletest/clean
+
+#=============================================================================
+# Directory level rules for directory extern/googletest/googlemock
+
+# Recursive "all" directory target.
+extern/googletest/googlemock/all: extern/googletest/googlemock/CMakeFiles/gmock.dir/all
+extern/googletest/googlemock/all: extern/googletest/googlemock/CMakeFiles/gmock_main.dir/all
+extern/googletest/googlemock/all: extern/googletest/googletest/all
+.PHONY : extern/googletest/googlemock/all
+
+# Recursive "preinstall" directory target.
+extern/googletest/googlemock/preinstall: extern/googletest/googletest/preinstall
+.PHONY : extern/googletest/googlemock/preinstall
+
+# Recursive "clean" directory target.
+extern/googletest/googlemock/clean: extern/googletest/googlemock/CMakeFiles/gmock.dir/clean
+extern/googletest/googlemock/clean: extern/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
+extern/googletest/googlemock/clean: extern/googletest/googletest/clean
+.PHONY : extern/googletest/googlemock/clean
+
+#=============================================================================
+# Directory level rules for directory extern/googletest/googletest
+
+# Recursive "all" directory target.
+extern/googletest/googletest/all: extern/googletest/googletest/CMakeFiles/gtest.dir/all
+extern/googletest/googletest/all: extern/googletest/googletest/CMakeFiles/gtest_main.dir/all
+.PHONY : extern/googletest/googletest/all
+
+# Recursive "preinstall" directory target.
+extern/googletest/googletest/preinstall:
+.PHONY : extern/googletest/googletest/preinstall
+
+# Recursive "clean" directory target.
+extern/googletest/googletest/clean: extern/googletest/googletest/CMakeFiles/gtest.dir/clean
+extern/googletest/googletest/clean: extern/googletest/googletest/CMakeFiles/gtest_main.dir/clean
+.PHONY : extern/googletest/googletest/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/2D_game_assignment.dir
@@ -99,6 +154,138 @@ CMakeFiles/2D_game_assignment.dir/rule: cmake_check_build_system
 CMakeFiles/2D_game_assignment.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2D_game_assignment.dir/build.make CMakeFiles/2D_game_assignment.dir/clean
 .PHONY : CMakeFiles/2D_game_assignment.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/game_tests.dir
+
+# All Build rule for target.
+CMakeFiles/game_tests.dir/all: extern/googletest/googletest/CMakeFiles/gtest.dir/all
+CMakeFiles/game_tests.dir/all: extern/googletest/googletest/CMakeFiles/gtest_main.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_tests.dir/build.make CMakeFiles/game_tests.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_tests.dir/build.make CMakeFiles/game_tests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" --progress-num=5,6,7,8 "Built target game_tests"
+.PHONY : CMakeFiles/game_tests.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/game_tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/game_tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" 0
+.PHONY : CMakeFiles/game_tests.dir/rule
+
+# Convenience name for target.
+game_tests: CMakeFiles/game_tests.dir/rule
+.PHONY : game_tests
+
+# clean rule for target.
+CMakeFiles/game_tests.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_tests.dir/build.make CMakeFiles/game_tests.dir/clean
+.PHONY : CMakeFiles/game_tests.dir/clean
+
+#=============================================================================
+# Target rules for target extern/googletest/googlemock/CMakeFiles/gmock.dir
+
+# All Build rule for target.
+extern/googletest/googlemock/CMakeFiles/gmock.dir/all: extern/googletest/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f extern/googletest/googlemock/CMakeFiles/gmock.dir/build.make extern/googletest/googlemock/CMakeFiles/gmock.dir/depend
+	$(MAKE) $(MAKESILENT) -f extern/googletest/googlemock/CMakeFiles/gmock.dir/build.make extern/googletest/googlemock/CMakeFiles/gmock.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" --progress-num=9,10 "Built target gmock"
+.PHONY : extern/googletest/googlemock/CMakeFiles/gmock.dir/all
+
+# Build rule for subdir invocation for target.
+extern/googletest/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/googletest/googlemock/CMakeFiles/gmock.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" 0
+.PHONY : extern/googletest/googlemock/CMakeFiles/gmock.dir/rule
+
+# Convenience name for target.
+gmock: extern/googletest/googlemock/CMakeFiles/gmock.dir/rule
+.PHONY : gmock
+
+# clean rule for target.
+extern/googletest/googlemock/CMakeFiles/gmock.dir/clean:
+	$(MAKE) $(MAKESILENT) -f extern/googletest/googlemock/CMakeFiles/gmock.dir/build.make extern/googletest/googlemock/CMakeFiles/gmock.dir/clean
+.PHONY : extern/googletest/googlemock/CMakeFiles/gmock.dir/clean
+
+#=============================================================================
+# Target rules for target extern/googletest/googlemock/CMakeFiles/gmock_main.dir
+
+# All Build rule for target.
+extern/googletest/googlemock/CMakeFiles/gmock_main.dir/all: extern/googletest/googlemock/CMakeFiles/gmock.dir/all
+extern/googletest/googlemock/CMakeFiles/gmock_main.dir/all: extern/googletest/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f extern/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make extern/googletest/googlemock/CMakeFiles/gmock_main.dir/depend
+	$(MAKE) $(MAKESILENT) -f extern/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make extern/googletest/googlemock/CMakeFiles/gmock_main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" --progress-num=11,12 "Built target gmock_main"
+.PHONY : extern/googletest/googlemock/CMakeFiles/gmock_main.dir/all
+
+# Build rule for subdir invocation for target.
+extern/googletest/googlemock/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/googletest/googlemock/CMakeFiles/gmock_main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" 0
+.PHONY : extern/googletest/googlemock/CMakeFiles/gmock_main.dir/rule
+
+# Convenience name for target.
+gmock_main: extern/googletest/googlemock/CMakeFiles/gmock_main.dir/rule
+.PHONY : gmock_main
+
+# clean rule for target.
+extern/googletest/googlemock/CMakeFiles/gmock_main.dir/clean:
+	$(MAKE) $(MAKESILENT) -f extern/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make extern/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
+.PHONY : extern/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
+
+#=============================================================================
+# Target rules for target extern/googletest/googletest/CMakeFiles/gtest.dir
+
+# All Build rule for target.
+extern/googletest/googletest/CMakeFiles/gtest.dir/all:
+	$(MAKE) $(MAKESILENT) -f extern/googletest/googletest/CMakeFiles/gtest.dir/build.make extern/googletest/googletest/CMakeFiles/gtest.dir/depend
+	$(MAKE) $(MAKESILENT) -f extern/googletest/googletest/CMakeFiles/gtest.dir/build.make extern/googletest/googletest/CMakeFiles/gtest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" --progress-num=13,14 "Built target gtest"
+.PHONY : extern/googletest/googletest/CMakeFiles/gtest.dir/all
+
+# Build rule for subdir invocation for target.
+extern/googletest/googletest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/googletest/googletest/CMakeFiles/gtest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" 0
+.PHONY : extern/googletest/googletest/CMakeFiles/gtest.dir/rule
+
+# Convenience name for target.
+gtest: extern/googletest/googletest/CMakeFiles/gtest.dir/rule
+.PHONY : gtest
+
+# clean rule for target.
+extern/googletest/googletest/CMakeFiles/gtest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f extern/googletest/googletest/CMakeFiles/gtest.dir/build.make extern/googletest/googletest/CMakeFiles/gtest.dir/clean
+.PHONY : extern/googletest/googletest/CMakeFiles/gtest.dir/clean
+
+#=============================================================================
+# Target rules for target extern/googletest/googletest/CMakeFiles/gtest_main.dir
+
+# All Build rule for target.
+extern/googletest/googletest/CMakeFiles/gtest_main.dir/all: extern/googletest/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f extern/googletest/googletest/CMakeFiles/gtest_main.dir/build.make extern/googletest/googletest/CMakeFiles/gtest_main.dir/depend
+	$(MAKE) $(MAKESILENT) -f extern/googletest/googletest/CMakeFiles/gtest_main.dir/build.make extern/googletest/googletest/CMakeFiles/gtest_main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" --progress-num=15,16 "Built target gtest_main"
+.PHONY : extern/googletest/googletest/CMakeFiles/gtest_main.dir/all
+
+# Build rule for subdir invocation for target.
+extern/googletest/googletest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extern/googletest/googletest/CMakeFiles/gtest_main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" 0
+.PHONY : extern/googletest/googletest/CMakeFiles/gtest_main.dir/rule
+
+# Convenience name for target.
+gtest_main: extern/googletest/googletest/CMakeFiles/gtest_main.dir/rule
+.PHONY : gtest_main
+
+# clean rule for target.
+extern/googletest/googletest/CMakeFiles/gtest_main.dir/clean:
+	$(MAKE) $(MAKESILENT) -f extern/googletest/googletest/CMakeFiles/gtest_main.dir/build.make extern/googletest/googletest/CMakeFiles/gtest_main.dir/clean
+.PHONY : extern/googletest/googletest/CMakeFiles/gtest_main.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

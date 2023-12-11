@@ -114,8 +114,8 @@ void Game::processInput() {
 bool wasColliding = false;
 
 void Game::update() {
+    // Player movement handling
     sf::Vector2f targetPosition(0.f, 0.f);
-
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
         targetPosition = sf::Vector2f(-1.f, 0.f);
     } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
@@ -132,43 +132,62 @@ void Game::update() {
         Move::movePlayer(player, &targetPosition, 1.0f);
     }
 
-    if (ghostMoveClock.getElapsedTime().asSeconds() >= 0.5) {
+    // Ghost spawning
+    if (ghostSpawnClock.getElapsedTime().asSeconds() >= 1.0) {  // Adjust the time as needed for spawning frequency
+        generateRandomGhost();
+        ghostSpawnClock.restart();
+    }
 
-        sf::Vector2f target_pos_ghost;
-        bool validPosition = false;
+    // Update and collision check for each ghost
+    for (size_t i = 0; i < ghosts.size(); ++i) {
+        if (ghostMoveClocks[i].getElapsedTime().asSeconds() >= 0.5) {
+            float x_direction = (rand() % 3 - 1);  
+            float y_direction = (rand() % 3 - 1);  
+            float speed = static_cast<float>(rand() % 5 + 1);  // Random speed
 
-        while (!validPosition) {
-            float x_ghost = static_cast<float>(rand() % 2);
-            float y_ghost = static_cast<float>(rand() % 2);
+            sf::Vector2f target_pos_ghost = sf::Vector2f(x_direction * speed, y_direction * speed);
+            sf::Vector2f potentialNewPosition = ghosts[i].getPosition() + target_pos_ghost;
 
-            target_pos_ghost = sf::Vector2f(x_ghost * 10.0f, y_ghost * 10.0f);
-            sf::Vector2f potentialNewPosition = ghost.getPosition() + target_pos_ghost;
-            validPosition = ghostIsValidPosition(potentialNewPosition);
+            if (ghostIsValidPosition(potentialNewPosition)) {
+                Move::moveGhost(ghosts[i], &target_pos_ghost, 1.0f);
+                ghostMoveClocks[i].restart();
+            }
+        }
 
-
-            Move::movePlayer(ghost, &target_pos_ghost, 1.0f);
-
-            // Reset the clock
-            ghostMoveClock.restart();
+        bool collisionOccurred = false;
+        for (auto& ghost : ghosts) {
+            if (isCollision(player, ghost)) {
+            collisionOccurred = true;
+            break; // Assuming one collision is enough to trigger the effect
         }
     }
 
-    bool isColliding = isCollision(player, ghost);
-    if (isColliding) {
-        // Collision occurred
-        if (explosionTimer.getElapsedTime().asSeconds() >= 0.1) {
+    // Handling collision effect
+        if (collisionOccurred) {
             player.setTexture(&explosionTexture);
-        }
-        wasColliding = true;  // Update the flag
-    } else {
-        // No collision in this frame
-        if (wasColliding) {
+            wasColliding = true;  // Update the flag
+        } else if (wasColliding) {
             // Change the texture back immediately when no longer colliding
             player.setTexture(&playerTexture);
+            wasColliding = false;  // Update the flag
         }
-        wasColliding = false;  // Update the flag
     }
+
+ 
 }
+    
+
+void Game::generateRandomGhost() {
+    sf::CircleShape newGhost(RADIUS);
+    newGhost.setOrigin(RADIUS, RADIUS);
+    newGhost.setPosition(rand() % (int)SCENE_WIDTH, rand() % (int)SCENE_HEIGHT);
+    newGhost.setTexture(&ghostTexture);
+    ghosts.push_back(newGhost);
+
+    ghostMoveClocks.push_back(sf::Clock());  // Add a new clock for the new ghost
+}
+
+
 
 bool Game::ghostIsValidPosition(const sf::Vector2f &position) {
     // Checking if the entire ghost (considering radius) is within the scene
@@ -200,7 +219,9 @@ void Game::render() {
     window.clear(sf::Color::White);
     window.draw(background);
     window.draw(player);
-    window.draw(ghost);
+    for (const auto& ghost : ghosts) {  // Draw all ghosts
+        window.draw(ghost);
+    }
     window.display();
 }
 /**

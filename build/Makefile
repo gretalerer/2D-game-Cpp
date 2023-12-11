@@ -85,6 +85,51 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"gmock\" \"gtest\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/opt/homebrew/Cellar/cmake/3.27.8/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/opt/homebrew/Cellar/cmake/3.27.8/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/opt/homebrew/Cellar/cmake/3.27.8/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/opt/homebrew/Cellar/cmake/3.27.8/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/opt/homebrew/Cellar/cmake/3.27.8/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/opt/homebrew/Cellar/cmake/3.27.8/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build//CMakeFiles/progress.marks"
@@ -129,12 +174,78 @@ depend:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2D_game_assignment.dir/build.make CMakeFiles/2D_game_assignment.dir/build
 .PHONY : 2D_game_assignment/fast
 
+#=============================================================================
+# Target rules for targets named game_tests
+
+# Build rule for target.
+game_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game_tests
+.PHONY : game_tests
+
+# fast build rule for target.
+game_tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_tests.dir/build.make CMakeFiles/game_tests.dir/build
+.PHONY : game_tests/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) $(MAKESILENT) -f extern/googletest/googlemock/CMakeFiles/gmock.dir/build.make extern/googletest/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) $(MAKESILENT) -f extern/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make extern/googletest/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) $(MAKESILENT) -f extern/googletest/googletest/CMakeFiles/gtest.dir/build.make extern/googletest/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) $(MAKESILENT) -f extern/googletest/googletest/CMakeFiles/gtest_main.dir/build.make extern/googletest/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
 src/game.o: src/game.cpp.o
 .PHONY : src/game.o
 
 # target to build an object file
 src/game.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2D_game_assignment.dir/build.make CMakeFiles/2D_game_assignment.dir/src/game.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_tests.dir/build.make CMakeFiles/game_tests.dir/src/game.cpp.o
 .PHONY : src/game.cpp.o
 
 src/game.i: src/game.cpp.i
@@ -143,6 +254,7 @@ src/game.i: src/game.cpp.i
 # target to preprocess a source file
 src/game.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2D_game_assignment.dir/build.make CMakeFiles/2D_game_assignment.dir/src/game.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_tests.dir/build.make CMakeFiles/game_tests.dir/src/game.cpp.i
 .PHONY : src/game.cpp.i
 
 src/game.s: src/game.cpp.s
@@ -151,6 +263,7 @@ src/game.s: src/game.cpp.s
 # target to generate assembly for a file
 src/game.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2D_game_assignment.dir/build.make CMakeFiles/2D_game_assignment.dir/src/game.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_tests.dir/build.make CMakeFiles/game_tests.dir/src/game.cpp.s
 .PHONY : src/game.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -183,6 +296,7 @@ src/move.o: src/move.cpp.o
 # target to build an object file
 src/move.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2D_game_assignment.dir/build.make CMakeFiles/2D_game_assignment.dir/src/move.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_tests.dir/build.make CMakeFiles/game_tests.dir/src/move.cpp.o
 .PHONY : src/move.cpp.o
 
 src/move.i: src/move.cpp.i
@@ -191,6 +305,7 @@ src/move.i: src/move.cpp.i
 # target to preprocess a source file
 src/move.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2D_game_assignment.dir/build.make CMakeFiles/2D_game_assignment.dir/src/move.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_tests.dir/build.make CMakeFiles/game_tests.dir/src/move.cpp.i
 .PHONY : src/move.cpp.i
 
 src/move.s: src/move.cpp.s
@@ -199,7 +314,32 @@ src/move.s: src/move.cpp.s
 # target to generate assembly for a file
 src/move.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2D_game_assignment.dir/build.make CMakeFiles/2D_game_assignment.dir/src/move.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_tests.dir/build.make CMakeFiles/game_tests.dir/src/move.cpp.s
 .PHONY : src/move.cpp.s
+
+tests/game_test.o: tests/game_test.cpp.o
+.PHONY : tests/game_test.o
+
+# target to build an object file
+tests/game_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_tests.dir/build.make CMakeFiles/game_tests.dir/tests/game_test.cpp.o
+.PHONY : tests/game_test.cpp.o
+
+tests/game_test.i: tests/game_test.cpp.i
+.PHONY : tests/game_test.i
+
+# target to preprocess a source file
+tests/game_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_tests.dir/build.make CMakeFiles/game_tests.dir/tests/game_test.cpp.i
+.PHONY : tests/game_test.cpp.i
+
+tests/game_test.s: tests/game_test.cpp.s
+.PHONY : tests/game_test.s
+
+# target to generate assembly for a file
+tests/game_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_tests.dir/build.make CMakeFiles/game_tests.dir/tests/game_test.cpp.s
+.PHONY : tests/game_test.cpp.s
 
 # Help Target
 help:
@@ -208,8 +348,17 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... 2D_game_assignment"
+	@echo "... game_tests"
+	@echo "... gmock"
+	@echo "... gmock_main"
+	@echo "... gtest"
+	@echo "... gtest_main"
 	@echo "... src/game.o"
 	@echo "... src/game.i"
 	@echo "... src/game.s"
@@ -219,6 +368,9 @@ help:
 	@echo "... src/move.o"
 	@echo "... src/move.i"
 	@echo "... src/move.s"
+	@echo "... tests/game_test.o"
+	@echo "... tests/game_test.i"
+	@echo "... tests/game_test.s"
 .PHONY : help
 
 

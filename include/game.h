@@ -6,6 +6,7 @@
  */
 #pragma once
 #include <SFML/Graphics.hpp>
+#include <vector>  
 
 class Game {
 public:
@@ -23,6 +24,9 @@ private:
     sf::CircleShape ghost;
     sf::Clock ghostMoveClock;
     sf::Clock explosionTimer;
+    std::vector<sf::CircleShape> ghosts;  
+    sf::Clock ghostSpawnClock;
+    std::vector<sf::Clock> ghostMoveClocks;
 
 
     static const float SCENE_WIDTH;
@@ -43,4 +47,5 @@ private:
     void render();
     bool ghostIsValidPosition(const sf::Vector2f& position);
     bool isCollision(sf::CircleShape& player, sf::CircleShape& ghost);
+    void generateRandomGhost();
 };

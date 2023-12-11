@@ -1,0 +1,6 @@
+[submodule "build/extern/googletest"]
+	path = build/extern/googletest
+	url = https://github.com/google/googletest.git
+[submodule "extern/googletest"]
+	path = extern/googletest
+	url = https://github.com/google/googletest.git
