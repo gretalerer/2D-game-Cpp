@@ -11,6 +11,7 @@ include_directories(include)
 configure_file(resources/background.png ${CMAKE_CURRENT_BINARY_DIR}/resources/background.png COPYONLY)
 configure_file(resources/pacman.png ${CMAKE_CURRENT_BINARY_DIR}/resources/pacman.png COPYONLY)
 configure_file(resources/ghost.png ${CMAKE_CURRENT_BINARY_DIR}/resources/ghost.png COPYONLY)
+configure_file(resources/pacman-explosion.png ${CMAKE_CURRENT_BINARY_DIR}/resources/pacman-explosion.png COPYONLY)
 
 
 add_executable(2D_game_assignment

@@ -18,10 +18,12 @@ private:
     sf::Texture backgroundTexture;
     sf::Texture playerTexture;
     sf::Texture ghostTexture;
+    sf::Texture explosionTexture;
     sf::CircleShape player;
     sf::CircleShape ghost;
     sf::Clock ghostMoveClock;
-    sf::Vector2f ghostTargetPosition;
+    sf::Clock explosionTimer;
+
 
     static const float SCENE_WIDTH;
     static const float SCENE_HEIGHT;
@@ -33,10 +35,12 @@ private:
 
     int initWindow();
     int initBackground();
+    int initExplosionTexture();
     int initPlayer();
     int initGhost();
     void processInput();
     void update();
     void render();
     bool ghostIsValidPosition(const sf::Vector2f& position);
+    bool isCollision(sf::CircleShape& player, sf::CircleShape& ghost);
 };

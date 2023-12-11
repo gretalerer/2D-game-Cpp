@@ -7,6 +7,8 @@
 #include "game.h"
 #include "move.h"
 #include <cstdlib>
+#include <cmath>
+
 
 const float Game::SCENE_WIDTH = 800.0f;
 const float Game::SCENE_HEIGHT = 600.0f;
@@ -20,7 +22,9 @@ Game::Game() : ghostMoveClock() {
     initWindow();
     initBackground();
     initPlayer();
+    initExplosionTexture();
     initGhost();
+    explosionTimer.restart();
 }
 /**
  * Window initializer.
@@ -42,6 +46,14 @@ int Game::initBackground() {
     background.setTextureRect(sf::IntRect(0, 0, SCENE_WIDTH, SCENE_HEIGHT));
     return 0;
 }
+
+int Game::initExplosionTexture() {
+    if (!explosionTexture.loadFromFile("resources/pacman-explosion.png")) {
+        return 1; // Texture loading failed
+    }
+    return 0; // Texture loading succeeded
+}
+
 
 /**
  * Player (e.g. PacMan) initializer
@@ -76,6 +88,8 @@ int Game::initGhost() {
 }
 
 
+
+
 /**
  * Dealing with events on window.
  */
@@ -89,12 +103,16 @@ void Game::processInput() {
             default:
                 break;
         }
+
     }
 }
 
 /**
  * Function to update the position of the player
  */
+
+bool wasColliding = false;
+
 void Game::update() {
     sf::Vector2f targetPosition(0.f, 0.f);
 
@@ -123,18 +141,33 @@ void Game::update() {
             float x_ghost = static_cast<float>(rand() % 2);
             float y_ghost = static_cast<float>(rand() % 2);
 
-            target_pos_ghost = sf::Vector2f(x_ghost * 10.0f, y_ghost * 10.0f); // Increasing the step size
+            target_pos_ghost = sf::Vector2f(x_ghost * 10.0f, y_ghost * 10.0f);
             sf::Vector2f potentialNewPosition = ghost.getPosition() + target_pos_ghost;
-            validPosition = ghostIsValidPosition(potentialNewPosition); // Check the potential new position
+            validPosition = ghostIsValidPosition(potentialNewPosition);
 
 
-            Move::movePlayer(ghost, &target_pos_ghost, 1.0f); // Use a lower speed factor
+            Move::movePlayer(ghost, &target_pos_ghost, 1.0f);
 
             // Reset the clock
             ghostMoveClock.restart();
         }
     }
 
+    bool isColliding = isCollision(player, ghost);
+    if (isColliding) {
+        // Collision occurred
+        if (explosionTimer.getElapsedTime().asSeconds() >= 0.1) {
+            player.setTexture(&explosionTexture);
+        }
+        wasColliding = true;  // Update the flag
+    } else {
+        // No collision in this frame
+        if (wasColliding) {
+            // Change the texture back immediately when no longer colliding
+            player.setTexture(&playerTexture);
+        }
+        wasColliding = false;  // Update the flag
+    }
 }
 
 bool Game::ghostIsValidPosition(const sf::Vector2f &position) {
@@ -143,6 +176,21 @@ bool Game::ghostIsValidPosition(const sf::Vector2f &position) {
             position.y - RADIUS >= 0 && position.y + RADIUS <= SCENE_HEIGHT);
 }
 
+
+bool Game::isCollision(sf::CircleShape& player, sf::CircleShape& ghost){
+    sf::Vector2f pos_ghost = ghost.getPosition();
+    sf::Vector2f pos_player = player.getPosition();
+    float distance = sqrt(pow(pos_ghost.x - pos_player.x, 2) + pow(pos_ghost.y - pos_player.y, 2));
+
+    if (distance < RADIUS * 2) {
+        player.setTexture(&explosionTexture);
+
+        explosionTimer.restart();
+        return true;
+    }
+    return false;
+
+}
 
 
 /**
