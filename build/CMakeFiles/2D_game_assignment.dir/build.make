@@ -53,10 +53,10 @@ RM = /opt/homebrew/Cellar/cmake/3.27.8/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/gretalerer/computerprogrammingII/2D-game
+CMAKE_SOURCE_DIR = "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/gretalerer/computerprogrammingII/2D-game/build
+CMAKE_BINARY_DIR = "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/2D_game_assignment.dir/depend.make
@@ -70,46 +70,46 @@ include CMakeFiles/2D_game_assignment.dir/progress.make
 include CMakeFiles/2D_game_assignment.dir/flags.make
 
 CMakeFiles/2D_game_assignment.dir/src/main.cpp.o: CMakeFiles/2D_game_assignment.dir/flags.make
-CMakeFiles/2D_game_assignment.dir/src/main.cpp.o: /Users/gretalerer/computerprogrammingII/2D-game/src/main.cpp
+CMakeFiles/2D_game_assignment.dir/src/main.cpp.o: /Users/santiagofischel/Desktop/University/Programming\ 2/2D-game-priv/src/main.cpp
 CMakeFiles/2D_game_assignment.dir/src/main.cpp.o: CMakeFiles/2D_game_assignment.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/gretalerer/computerprogrammingII/2D-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/2D_game_assignment.dir/src/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2D_game_assignment.dir/src/main.cpp.o -MF CMakeFiles/2D_game_assignment.dir/src/main.cpp.o.d -o CMakeFiles/2D_game_assignment.dir/src/main.cpp.o -c /Users/gretalerer/computerprogrammingII/2D-game/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/2D_game_assignment.dir/src/main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2D_game_assignment.dir/src/main.cpp.o -MF CMakeFiles/2D_game_assignment.dir/src/main.cpp.o.d -o CMakeFiles/2D_game_assignment.dir/src/main.cpp.o -c "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/src/main.cpp"
 
 CMakeFiles/2D_game_assignment.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/2D_game_assignment.dir/src/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/gretalerer/computerprogrammingII/2D-game/src/main.cpp > CMakeFiles/2D_game_assignment.dir/src/main.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/src/main.cpp" > CMakeFiles/2D_game_assignment.dir/src/main.cpp.i
 
 CMakeFiles/2D_game_assignment.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/2D_game_assignment.dir/src/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gretalerer/computerprogrammingII/2D-game/src/main.cpp -o CMakeFiles/2D_game_assignment.dir/src/main.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/src/main.cpp" -o CMakeFiles/2D_game_assignment.dir/src/main.cpp.s
 
 CMakeFiles/2D_game_assignment.dir/src/game.cpp.o: CMakeFiles/2D_game_assignment.dir/flags.make
-CMakeFiles/2D_game_assignment.dir/src/game.cpp.o: /Users/gretalerer/computerprogrammingII/2D-game/src/game.cpp
+CMakeFiles/2D_game_assignment.dir/src/game.cpp.o: /Users/santiagofischel/Desktop/University/Programming\ 2/2D-game-priv/src/game.cpp
 CMakeFiles/2D_game_assignment.dir/src/game.cpp.o: CMakeFiles/2D_game_assignment.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/gretalerer/computerprogrammingII/2D-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/2D_game_assignment.dir/src/game.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2D_game_assignment.dir/src/game.cpp.o -MF CMakeFiles/2D_game_assignment.dir/src/game.cpp.o.d -o CMakeFiles/2D_game_assignment.dir/src/game.cpp.o -c /Users/gretalerer/computerprogrammingII/2D-game/src/game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/2D_game_assignment.dir/src/game.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2D_game_assignment.dir/src/game.cpp.o -MF CMakeFiles/2D_game_assignment.dir/src/game.cpp.o.d -o CMakeFiles/2D_game_assignment.dir/src/game.cpp.o -c "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/src/game.cpp"
 
 CMakeFiles/2D_game_assignment.dir/src/game.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/2D_game_assignment.dir/src/game.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/gretalerer/computerprogrammingII/2D-game/src/game.cpp > CMakeFiles/2D_game_assignment.dir/src/game.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/src/game.cpp" > CMakeFiles/2D_game_assignment.dir/src/game.cpp.i
 
 CMakeFiles/2D_game_assignment.dir/src/game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/2D_game_assignment.dir/src/game.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gretalerer/computerprogrammingII/2D-game/src/game.cpp -o CMakeFiles/2D_game_assignment.dir/src/game.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/src/game.cpp" -o CMakeFiles/2D_game_assignment.dir/src/game.cpp.s
 
 CMakeFiles/2D_game_assignment.dir/src/move.cpp.o: CMakeFiles/2D_game_assignment.dir/flags.make
-CMakeFiles/2D_game_assignment.dir/src/move.cpp.o: /Users/gretalerer/computerprogrammingII/2D-game/src/move.cpp
+CMakeFiles/2D_game_assignment.dir/src/move.cpp.o: /Users/santiagofischel/Desktop/University/Programming\ 2/2D-game-priv/src/move.cpp
 CMakeFiles/2D_game_assignment.dir/src/move.cpp.o: CMakeFiles/2D_game_assignment.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/gretalerer/computerprogrammingII/2D-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/2D_game_assignment.dir/src/move.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2D_game_assignment.dir/src/move.cpp.o -MF CMakeFiles/2D_game_assignment.dir/src/move.cpp.o.d -o CMakeFiles/2D_game_assignment.dir/src/move.cpp.o -c /Users/gretalerer/computerprogrammingII/2D-game/src/move.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/2D_game_assignment.dir/src/move.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2D_game_assignment.dir/src/move.cpp.o -MF CMakeFiles/2D_game_assignment.dir/src/move.cpp.o.d -o CMakeFiles/2D_game_assignment.dir/src/move.cpp.o -c "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/src/move.cpp"
 
 CMakeFiles/2D_game_assignment.dir/src/move.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/2D_game_assignment.dir/src/move.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/gretalerer/computerprogrammingII/2D-game/src/move.cpp > CMakeFiles/2D_game_assignment.dir/src/move.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/src/move.cpp" > CMakeFiles/2D_game_assignment.dir/src/move.cpp.i
 
 CMakeFiles/2D_game_assignment.dir/src/move.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/2D_game_assignment.dir/src/move.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gretalerer/computerprogrammingII/2D-game/src/move.cpp -o CMakeFiles/2D_game_assignment.dir/src/move.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/src/move.cpp" -o CMakeFiles/2D_game_assignment.dir/src/move.cpp.s
 
 # Object files for target 2D_game_assignment
 2D_game_assignment_OBJECTS = \
@@ -128,7 +128,7 @@ CMakeFiles/2D_game_assignment.dir/src/move.cpp.s: cmake_force
 2D_game_assignment: /opt/homebrew/Cellar/sfml/2.6.1/lib/libsfml-window.2.6.1.dylib
 2D_game_assignment: /opt/homebrew/Cellar/sfml/2.6.1/lib/libsfml-system.2.6.1.dylib
 2D_game_assignment: CMakeFiles/2D_game_assignment.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/gretalerer/computerprogrammingII/2D-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable 2D_game_assignment"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable 2D_game_assignment"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/2D_game_assignment.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -140,6 +140,6 @@ CMakeFiles/2D_game_assignment.dir/clean:
 .PHONY : CMakeFiles/2D_game_assignment.dir/clean
 
 CMakeFiles/2D_game_assignment.dir/depend:
-	cd /Users/gretalerer/computerprogrammingII/2D-game/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/gretalerer/computerprogrammingII/2D-game /Users/gretalerer/computerprogrammingII/2D-game /Users/gretalerer/computerprogrammingII/2D-game/build /Users/gretalerer/computerprogrammingII/2D-game/build /Users/gretalerer/computerprogrammingII/2D-game/build/CMakeFiles/2D_game_assignment.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv" "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv" "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build" "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build" "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles/2D_game_assignment.dir/DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CMakeFiles/2D_game_assignment.dir/depend
 

@@ -4,9 +4,9 @@
 # compile CXX with /Library/Developer/CommandLineTools/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/gretalerer/computerprogrammingII/2D-game/include -isystem /opt/homebrew/Cellar/sfml/2.6.1/include
+CXX_INCLUDES = -I"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/include" -isystem /opt/homebrew/Cellar/sfml/2.6.1/include
 
-CXX_FLAGSarm64 = -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+CXX_FLAGSarm64 = -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk
 
-CXX_FLAGS = -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+CXX_FLAGS = -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk
 

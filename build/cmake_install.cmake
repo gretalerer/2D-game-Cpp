@@ -1,4 +1,4 @@
-# Install script for directory: /Users/gretalerer/computerprogrammingII/2D-game
+# Install script for directory: /Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/gretalerer/computerprogrammingII/2D-game/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
