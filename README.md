@@ -1,4 +1,4 @@
-# 2D Game 
+# StellarStriker
 
 ## Installation Guidelines
 To build and run the 2D Game Assignment, you will need to have CMake installed and configured for your system.
