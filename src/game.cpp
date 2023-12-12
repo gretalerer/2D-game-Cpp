@@ -240,7 +240,7 @@ bool Game::isCollision(sf::CircleShape& player, sf::CircleShape& ghost){
 }
 
 void Game::shootBullet() {
-    sf::Vector2f startPosition = player.getPosition(); // Adjust as necessary
+    sf::Vector2f startPosition = player.getPosition(); 
     bullets.emplace_back(startPosition);
 }
 

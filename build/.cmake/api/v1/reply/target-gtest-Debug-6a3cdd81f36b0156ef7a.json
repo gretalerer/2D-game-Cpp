@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "lib/libgtest_main.a"
+			"path" : "lib/libgtest.a"
 		}
 	],
 	"backtrace" : 3,
@@ -16,7 +16,6 @@
 			"cxx_library",
 			"install",
 			"install_project",
-			"target_link_libraries",
 			"include_directories",
 			"target_compile_features"
 		],
@@ -34,7 +33,7 @@
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 141,
+				"line" : 123,
 				"parent" : 0
 			},
 			{
@@ -62,28 +61,22 @@
 				"parent" : 4
 			},
 			{
-				"command" : 5,
-				"file" : 1,
-				"line" : 153,
-				"parent" : 0
-			},
-			{
 				"file" : 2
 			},
 			{
-				"command" : 6,
+				"command" : 5,
 				"file" : 2,
 				"line" : 9,
-				"parent" : 7
+				"parent" : 6
 			},
 			{
-				"command" : 6,
+				"command" : 5,
 				"file" : 1,
 				"line" : 113,
 				"parent" : 0
 			},
 			{
-				"command" : 7,
+				"command" : 6,
 				"file" : 0,
 				"line" : 198,
 				"parent" : 2
@@ -96,7 +89,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-std=c++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk"
+					"fragment" : "-g -std=c++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk"
 				},
 				{
 					"fragment" : " -DGTEST_HAS_PTHREAD=1  "
@@ -105,17 +98,15 @@
 			"includes" : 
 			[
 				{
-					"backtrace" : 8,
+					"backtrace" : 7,
 					"path" : "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/include"
 				},
 				{
-					"backtrace" : 9,
-					"isSystem" : true,
+					"backtrace" : 8,
 					"path" : "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googletest/include"
 				},
 				{
-					"backtrace" : 9,
-					"isSystem" : true,
+					"backtrace" : 8,
 					"path" : "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googletest"
 				}
 			],
@@ -124,7 +115,7 @@
 			{
 				"backtraces" : 
 				[
-					10
+					9
 				],
 				"standard" : "14"
 			},
@@ -134,14 +125,7 @@
 			]
 		}
 	],
-	"dependencies" : 
-	[
-		{
-			"backtrace" : 6,
-			"id" : "gtest::@cd6fe4ca901feadd7fe5"
-		}
-	],
-	"id" : "gtest_main::@cd6fe4ca901feadd7fe5",
+	"id" : "gtest::@cd6fe4ca901feadd7fe5",
 	"install" : 
 	{
 		"destinations" : 
@@ -156,8 +140,8 @@
 			"path" : "/usr/local"
 		}
 	},
-	"name" : "gtest_main",
-	"nameOnDisk" : "libgtest_main.a",
+	"name" : "gtest",
+	"nameOnDisk" : "libgtest.a",
 	"paths" : 
 	{
 		"build" : "extern/googletest/googletest",
@@ -178,7 +162,7 @@
 		{
 			"backtrace" : 3,
 			"compileGroupIndex" : 0,
-			"path" : "extern/googletest/googletest/src/gtest_main.cc",
+			"path" : "extern/googletest/googletest/src/gtest-all.cc",
 			"sourceGroupIndex" : 0
 		}
 	],

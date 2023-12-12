@@ -1,0 +1,74 @@
+[
+{
+  "directory": "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build",
+  "command": "/usr/bin/clang++ -I\"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/include\" -I\"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googletest/include\" -I\"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googletest\" -isystem /opt/homebrew/Cellar/sfml/2.6.1/include -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -o CMakeFiles/2D_game_assignment.dir/src/main.cpp.o -c \"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/src/main.cpp\"",
+  "file": "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/src/main.cpp",
+  "output": "CMakeFiles/2D_game_assignment.dir/src/main.cpp.o"
+},
+{
+  "directory": "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build",
+  "command": "/usr/bin/clang++ -I\"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/include\" -I\"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googletest/include\" -I\"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googletest\" -isystem /opt/homebrew/Cellar/sfml/2.6.1/include -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -o CMakeFiles/2D_game_assignment.dir/src/game.cpp.o -c \"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/src/game.cpp\"",
+  "file": "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/src/game.cpp",
+  "output": "CMakeFiles/2D_game_assignment.dir/src/game.cpp.o"
+},
+{
+  "directory": "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build",
+  "command": "/usr/bin/clang++ -I\"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/include\" -I\"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googletest/include\" -I\"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googletest\" -isystem /opt/homebrew/Cellar/sfml/2.6.1/include -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -o CMakeFiles/2D_game_assignment.dir/src/move.cpp.o -c \"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/src/move.cpp\"",
+  "file": "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/src/move.cpp",
+  "output": "CMakeFiles/2D_game_assignment.dir/src/move.cpp.o"
+},
+{
+  "directory": "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build",
+  "command": "/usr/bin/clang++ -I\"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/include\" -I\"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googletest/include\" -I\"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googletest\" -isystem /opt/homebrew/Cellar/sfml/2.6.1/include -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -o CMakeFiles/2D_game_assignment.dir/src/bullet.cpp.o -c \"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/src/bullet.cpp\"",
+  "file": "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/src/bullet.cpp",
+  "output": "CMakeFiles/2D_game_assignment.dir/src/bullet.cpp.o"
+},
+{
+  "directory": "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build",
+  "command": "/usr/bin/clang++ -I\"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/include\" -isystem \"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googletest/include\" -isystem \"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googletest\" -isystem /opt/homebrew/Cellar/sfml/2.6.1/include -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -o CMakeFiles/game_tests.dir/tests/game_test.cpp.o -c \"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/tests/game_test.cpp\"",
+  "file": "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/tests/game_test.cpp",
+  "output": "CMakeFiles/game_tests.dir/tests/game_test.cpp.o"
+},
+{
+  "directory": "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build",
+  "command": "/usr/bin/clang++ -I\"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/include\" -isystem \"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googletest/include\" -isystem \"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googletest\" -isystem /opt/homebrew/Cellar/sfml/2.6.1/include -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -o CMakeFiles/game_tests.dir/src/game.cpp.o -c \"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/src/game.cpp\"",
+  "file": "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/src/game.cpp",
+  "output": "CMakeFiles/game_tests.dir/src/game.cpp.o"
+},
+{
+  "directory": "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build",
+  "command": "/usr/bin/clang++ -I\"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/include\" -isystem \"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googletest/include\" -isystem \"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googletest\" -isystem /opt/homebrew/Cellar/sfml/2.6.1/include -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -o CMakeFiles/game_tests.dir/src/move.cpp.o -c \"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/src/move.cpp\"",
+  "file": "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/src/move.cpp",
+  "output": "CMakeFiles/game_tests.dir/src/move.cpp.o"
+},
+{
+  "directory": "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build",
+  "command": "/usr/bin/clang++ -I\"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/include\" -isystem \"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googletest/include\" -isystem \"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googletest\" -isystem /opt/homebrew/Cellar/sfml/2.6.1/include -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -o CMakeFiles/game_tests.dir/src/bullet.cpp.o -c \"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/src/bullet.cpp\"",
+  "file": "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/src/bullet.cpp",
+  "output": "CMakeFiles/game_tests.dir/src/bullet.cpp.o"
+},
+{
+  "directory": "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build",
+  "command": "/usr/bin/clang++ -I\"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/include\" -I\"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googlemock/include\" -I\"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googlemock\" -isystem \"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googletest/include\" -isystem \"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googletest\" -g -std=c++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk  -DGTEST_HAS_PTHREAD=1   -o extern/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o -c \"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googlemock/src/gmock-all.cc\"",
+  "file": "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googlemock/src/gmock-all.cc",
+  "output": "extern/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
+},
+{
+  "directory": "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build",
+  "command": "/usr/bin/clang++ -I\"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/include\" -isystem \"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googlemock/include\" -isystem \"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googlemock\" -isystem \"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googletest/include\" -isystem \"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googletest\" -g -std=c++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk  -DGTEST_HAS_PTHREAD=1   -o extern/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c \"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googlemock/src/gmock_main.cc\"",
+  "file": "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googlemock/src/gmock_main.cc",
+  "output": "extern/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o"
+},
+{
+  "directory": "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build",
+  "command": "/usr/bin/clang++ -I\"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/include\" -I\"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googletest/include\" -I\"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googletest\" -g -std=c++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk  -DGTEST_HAS_PTHREAD=1   -o extern/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o -c \"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googletest/src/gtest-all.cc\"",
+  "file": "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googletest/src/gtest-all.cc",
+  "output": "extern/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
+},
+{
+  "directory": "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build",
+  "command": "/usr/bin/clang++ -I\"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/include\" -isystem \"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googletest/include\" -isystem \"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googletest\" -g -std=c++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk  -DGTEST_HAS_PTHREAD=1   -o extern/googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c \"/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googletest/src/gtest_main.cc\"",
+  "file": "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/extern/googletest/googletest/src/gtest_main.cc",
+  "output": "extern/googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
+}
+]

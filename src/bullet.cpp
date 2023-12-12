@@ -28,9 +28,7 @@ sf::FloatRect Bullet::getGlobalBounds() const {
 
 
 void Bullet::hit() {
-    active = false; // Set 'active' to false, deactivating the bullet
-}
-
+    active = false; 
 
 void Bullet::setActive(bool active) {
     this->active = active;
