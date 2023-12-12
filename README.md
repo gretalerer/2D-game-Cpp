@@ -4,9 +4,11 @@
 To build and run the 2D Game Assignment, you will need to have CMake installed and configured for your system.
 
 1. Clone the repository to your local machine.
-2. Navigate to the cloned directory.
-3. Run `cmake .` in the terminal to generate the Makefile.
-4. Run `make` to build the executable.
+2. Navigate to the cloned repository.
+3. Create a new sub-folder called `build`
+4. Run `cmake ..` in the terminal to generate the Makefile.
+5. Run `make` to build the executable.
+6. Run the executable
 
 ## Dependencies
 - SFML 2.6 or higher
