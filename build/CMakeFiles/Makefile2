@@ -136,12 +136,12 @@ extern/googletest/googletest/clean: extern/googletest/googletest/CMakeFiles/gtes
 CMakeFiles/2D_game_assignment.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2D_game_assignment.dir/build.make CMakeFiles/2D_game_assignment.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2D_game_assignment.dir/build.make CMakeFiles/2D_game_assignment.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" --progress-num=1,2,3,4 "Built target 2D_game_assignment"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" --progress-num=1,2,3,4,5 "Built target 2D_game_assignment"
 .PHONY : CMakeFiles/2D_game_assignment.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/2D_game_assignment.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" 4
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/2D_game_assignment.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" 0
 .PHONY : CMakeFiles/2D_game_assignment.dir/rule
@@ -163,12 +163,12 @@ CMakeFiles/game_tests.dir/all: extern/googletest/googletest/CMakeFiles/gtest.dir
 CMakeFiles/game_tests.dir/all: extern/googletest/googletest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_tests.dir/build.make CMakeFiles/game_tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_tests.dir/build.make CMakeFiles/game_tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" --progress-num=5,6,7,8 "Built target game_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" --progress-num=6,7,8,9,10 "Built target game_tests"
 .PHONY : CMakeFiles/game_tests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/game_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" 8
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/game_tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" 0
 .PHONY : CMakeFiles/game_tests.dir/rule
@@ -189,7 +189,7 @@ CMakeFiles/game_tests.dir/clean:
 extern/googletest/googlemock/CMakeFiles/gmock.dir/all: extern/googletest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f extern/googletest/googlemock/CMakeFiles/gmock.dir/build.make extern/googletest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) $(MAKESILENT) -f extern/googletest/googlemock/CMakeFiles/gmock.dir/build.make extern/googletest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" --progress-num=9,10 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" --progress-num=11,12 "Built target gmock"
 .PHONY : extern/googletest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -216,7 +216,7 @@ extern/googletest/googlemock/CMakeFiles/gmock_main.dir/all: extern/googletest/go
 extern/googletest/googlemock/CMakeFiles/gmock_main.dir/all: extern/googletest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f extern/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make extern/googletest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f extern/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make extern/googletest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" --progress-num=11,12 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" --progress-num=13,14 "Built target gmock_main"
 .PHONY : extern/googletest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -242,7 +242,7 @@ extern/googletest/googlemock/CMakeFiles/gmock_main.dir/clean:
 extern/googletest/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) $(MAKESILENT) -f extern/googletest/googletest/CMakeFiles/gtest.dir/build.make extern/googletest/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f extern/googletest/googletest/CMakeFiles/gtest.dir/build.make extern/googletest/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" --progress-num=13,14 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" --progress-num=15,16 "Built target gtest"
 .PHONY : extern/googletest/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -268,7 +268,7 @@ extern/googletest/googletest/CMakeFiles/gtest.dir/clean:
 extern/googletest/googletest/CMakeFiles/gtest_main.dir/all: extern/googletest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f extern/googletest/googletest/CMakeFiles/gtest_main.dir/build.make extern/googletest/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f extern/googletest/googletest/CMakeFiles/gtest_main.dir/build.make extern/googletest/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" --progress-num=15,16 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/santiagofischel/Desktop/University/Programming 2/2D-game-priv/build/CMakeFiles" --progress-num=17,18 "Built target gtest_main"
 .PHONY : extern/googletest/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.

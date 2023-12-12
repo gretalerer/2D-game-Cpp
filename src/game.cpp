@@ -114,6 +114,9 @@ void Game::processInput() {
 bool wasColliding = false;
 
 void Game::update() {
+    static sf::Clock deltaClock;
+    float deltaTime = deltaClock.restart().asSeconds();
+
     // Player movement handling
     sf::Vector2f targetPosition(0.f, 0.f);
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
@@ -132,49 +135,74 @@ void Game::update() {
         Move::movePlayer(player, &targetPosition, 1.0f);
     }
 
+    // Handle shooting
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
+        shootBullet();
+    }
+
+    // Update bullets
+    for (auto& bullet : bullets) {
+        bullet.update(deltaTime);
+    }
+
+    // Remove inactive bullets
+    bullets.erase(std::remove_if(bullets.begin(), bullets.end(), 
+                 [](const Bullet& b) { return !b.isActive(); }), bullets.end());
+
     // Ghost spawning
-    if (ghostSpawnClock.getElapsedTime().asSeconds() >= 1.0) {  // Adjust the time as needed for spawning frequency
+    if (ghostSpawnClock.getElapsedTime().asSeconds() >= 1.0) {
         generateRandomGhost();
         ghostSpawnClock.restart();
     }
 
     // Update and collision check for each ghost
-    for (size_t i = 0; i < ghosts.size(); ++i) {
-        if (ghostMoveClocks[i].getElapsedTime().asSeconds() >= 0.5) {
+    for (auto& ghost : ghosts) {
+        if (ghostMoveClock.getElapsedTime().asSeconds() >= 0.5) {
             float x_direction = (rand() % 3 - 1);  
             float y_direction = (rand() % 3 - 1);  
-            float speed = static_cast<float>(rand() % 5 + 1);  // Random speed
+            float speed = static_cast<float>(rand() % 5 + 1);
 
             sf::Vector2f target_pos_ghost = sf::Vector2f(x_direction * speed, y_direction * speed);
-            sf::Vector2f potentialNewPosition = ghosts[i].getPosition() + target_pos_ghost;
+            sf::Vector2f potentialNewPosition = ghost.getPosition() + target_pos_ghost;
 
             if (ghostIsValidPosition(potentialNewPosition)) {
-                Move::moveGhost(ghosts[i], &target_pos_ghost, 1.0f);
-                ghostMoveClocks[i].restart();
+                Move::moveGhost(ghost, &target_pos_ghost, 1.0f);
+                ghostMoveClock.restart();
             }
         }
 
-        bool collisionOccurred = false;
-        for (auto& ghost : ghosts) {
-            if (isCollision(player, ghost)) {
+        // Check bullet collisions with ghosts
+        for (auto& bullet : bullets) {
+            for (auto& ghost : ghosts) {
+                if (bullet.isActive() && bullet.getGlobalBounds().intersects(ghost.getGlobalBounds())) {
+                    bullet.setActive(false);  // Deactivate the bullet
+                    ghost.setTexture(&explosionTexture); // Change ghost's texture to explosion
+                }
+            }
+        }
+    }
+
+    // Collision handling between player and ghosts
+    bool collisionOccurred = false;
+    for (auto& ghost : ghosts) {
+        if (isCollision(player, ghost)) {
             collisionOccurred = true;
             break; // Assuming one collision is enough to trigger the effect
         }
     }
 
     // Handling collision effect
-        if (collisionOccurred) {
-            player.setTexture(&explosionTexture);
-            wasColliding = true;  // Update the flag
-        } else if (wasColliding) {
-            // Change the texture back immediately when no longer colliding
-            player.setTexture(&playerTexture);
-            wasColliding = false;  // Update the flag
-        }
+    if (collisionOccurred) {
+        player.setTexture(&explosionTexture);
+        wasColliding = true;  // Update the flag
+    } else if (wasColliding) {
+        // Change the texture back immediately when no longer colliding
+        player.setTexture(&playerTexture);
+        wasColliding = false;  // Update the flag
     }
-
- 
 }
+
+
     
 
 void Game::generateRandomGhost() {
@@ -211,6 +239,11 @@ bool Game::isCollision(sf::CircleShape& player, sf::CircleShape& ghost){
 
 }
 
+void Game::shootBullet() {
+    sf::Vector2f startPosition = player.getPosition(); // Adjust as necessary
+    bullets.emplace_back(startPosition);
+}
+
 
 /**
  * Render elements in the window
@@ -221,6 +254,9 @@ void Game::render() {
     window.draw(player);
     for (const auto& ghost : ghosts) {  // Draw all ghosts
         window.draw(ghost);
+    }
+    for (const auto& bullet : bullets) {
+        bullet.draw(window);
     }
     window.display();
 }

@@ -19,7 +19,23 @@ add_executable(2D_game_assignment
         src/game.cpp
         src/game.cpp
         src/move.cpp
+        src/bullet.cpp
         include/move.h
 )
 
 target_link_libraries(${PROJECT_NAME} sfml-graphics sfml-window sfml-system)
+
+# Google Test
+add_subdirectory(extern/googletest)
+include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
+
+# Test executable
+add_executable(game_tests
+        tests/game_test.cpp
+        src/game.cpp
+        src/move.cpp
+        src/bullet.cpp
+)
+
+# Link SFML libraries to the test executable
+target_link_libraries(game_tests gtest_main sfml-graphics sfml-window sfml-system)

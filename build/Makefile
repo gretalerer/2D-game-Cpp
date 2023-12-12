@@ -239,6 +239,33 @@ gtest_main/fast:
 	$(MAKE) $(MAKESILENT) -f extern/googletest/googletest/CMakeFiles/gtest_main.dir/build.make extern/googletest/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+src/bullet.o: src/bullet.cpp.o
+.PHONY : src/bullet.o
+
+# target to build an object file
+src/bullet.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2D_game_assignment.dir/build.make CMakeFiles/2D_game_assignment.dir/src/bullet.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_tests.dir/build.make CMakeFiles/game_tests.dir/src/bullet.cpp.o
+.PHONY : src/bullet.cpp.o
+
+src/bullet.i: src/bullet.cpp.i
+.PHONY : src/bullet.i
+
+# target to preprocess a source file
+src/bullet.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2D_game_assignment.dir/build.make CMakeFiles/2D_game_assignment.dir/src/bullet.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_tests.dir/build.make CMakeFiles/game_tests.dir/src/bullet.cpp.i
+.PHONY : src/bullet.cpp.i
+
+src/bullet.s: src/bullet.cpp.s
+.PHONY : src/bullet.s
+
+# target to generate assembly for a file
+src/bullet.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2D_game_assignment.dir/build.make CMakeFiles/2D_game_assignment.dir/src/bullet.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_tests.dir/build.make CMakeFiles/game_tests.dir/src/bullet.cpp.s
+.PHONY : src/bullet.cpp.s
+
 src/game.o: src/game.cpp.o
 .PHONY : src/game.o
 
@@ -359,6 +386,9 @@ help:
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... src/bullet.o"
+	@echo "... src/bullet.i"
+	@echo "... src/bullet.s"
 	@echo "... src/game.o"
 	@echo "... src/game.i"
 	@echo "... src/game.s"
